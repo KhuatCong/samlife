@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    a{
+        text-decoration: none;
+    }
+}
+
+.ul-reset{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --baseColor: #2C0050;
+}
+@font-face{
+    font-family: baseFont;
+    src: url("/assets/font/Roboto-Regular.ttf");
+}
+body{
+    font: {
+        family: baseFont !important;
+    }
+}

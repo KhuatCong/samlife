@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="shortcut icon" href="assets/images/logo/logosam2.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/scss/base.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header class="d-none d-lg-block">
+        <div class="top-header">
+            <div class="container-xl">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="mail-header">
+                        info@baohiemsam.com
+                    </div>
+                    <div class="language-header">
+                        <img class="me-1" src="assets/images/icon/Vector_language.png" alt="">
+                        VN
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container-xl">
+                <div class="row align-items-center">
+                    <div class="col-lg-2">
+                        <div class="logo-header">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logosam2.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="menu-header">
+                            <ul class="ul-reset box-menu-header">
+                                <li class="item-menu"><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                                <li class="item-menu">
+                                    <a href="">Giới thiệu</a>
+                                    <ul class="ul-reset box-menu-sub shadow">
+                                        <li class="item-sub"><a href="">Giới thiệu chung</a></li>
+                                        <li class="item-sub"><a href="">Sứ mệnh</a></li>
+                                        <li class="item-sub"><a href="">Tầm nhìn</a></li>
+                                        <li class="item-sub"><a href="">Giá trị cốt lõi</a></li>
+                                        <li class="item-sub"><a href="">Ban lãnh đạo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item-menu">
+                                    <a href="">Dự án</a>
+                                    <ul class="ul-reset box-menu-sub shadow">
+                                        <li class="item-sub"><a href="">Dự án quà tặng 4 mùa</a></li>
+                                        <li class="item-sub"><a href="">Dự án tìm kiếm khách hàng mới</a></li>
+                                        <li class="item-sub"><a href="">Dự án thành lập học viện Samlife</a></li>
+                                        <li class="item-sub"><a href="">Dự án thành lập đơn vị thuế, kế toán</a></li>
+                                        <li class="item-sub"><a href="">Dự án mua chung cư cho tư vấn viên</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item-menu">
+                                    <a href="">Tin tức</a>
+                                    <ul class="ul-reset box-menu-sub shadow">
+                                        <li class="item-sub"><a href="">Tin tức dự án</a></li>
+                                        <li class="item-sub"><a href="">Tin tức doanh nghiệp</a></li>
+                                        <li class="item-sub"><a href="">Tin tức tổng hợp</a></li>
+                                    </ul>
+                                </li>
+                                <li class="item-menu"><a href="">Đối tác</a></li>
+                                <li class="item-menu"><a href="">Tuyển dụng</a></li>
+                                <li class="item-menu"><a href="">Công nghệ</a></li>
+                                <li class="item-menu"><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="visit-header">
+                            <a class="btn-visit-header" href="">
+                                Tham quan samlife
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-mb d-block d-lg-none shadow">
+        <div class="container-lg">
+            <div class="header-mb-top">
+                <div class="bar-mb" onclick="openMenu()">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </div>
+                <div class="logo-header-mb">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logosam2.png" alt="">
+                    </a>
+                </div>
+                <div class="language-header-mb">
+                    <span>VN</span>
+                    <span>|</span>
+                    <span>ENG</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu-mobile" class="menu-mobile d-block d-lg-none">
+        <div class="close-menu" id="close-menu" onclick="closeMenu()">
+            <i class="fa-solid fa-xmark fa-lg"></i>
+        </div>
+        <div class="box-menu-mobile">
+            <div class="search-menu-mobile">
+                <form action="">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button type="submit" style="padding: 4px 8px; border: none;"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <ul id="collapse-all" class="ul-reset list-menu-mobile">
+                <li class="item-menu"><a href="">Giới thiệu</a></li>
+                <li class="item-menu">
+                    <a href="">Dự án</a>
+                    <i class="fa-solid fa-caret-down" data-bs-toggle="collapse" data-bs-target="#menu-collapse-1"></i>
+                    <ul id="menu-collapse-1" class="ul-reset menu-mobile-sub collapse" data-bs-parent="#collapse-all">
+                        <li class="item-sub"><a href="">Dự án quà tặng 4 mùa</a></li>
+                        <li class="item-sub"><a href="">Dự án tìm kiếm khách hàng mới</a></li>
+                        <li class="item-sub"><a href="">Dự án thành lập học viện Samlife</a></li>
+                        <li class="item-sub"><a href="">Dự án thành lập đơn vị thuế, kế toán</a></li>
+                        <li class="item-sub"><a href="">Dự án mua chung cư cho tư vấn viên</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu">
+                    <a href="">Tin tức</a>
+                    <i class="fa-solid fa-caret-down" data-bs-toggle="collapse" data-bs-target="#menu-collapse-2"></i>
+                    <ul id="menu-collapse-2" class="ul-reset menu-mobile-sub collapse" data-bs-parent="#collapse-all">
+                        <li class="item-sub"><a href="">Tin tức dự án</a></li>
+                        <li class="item-sub"><a href="">Tin tức doanh nghiệp</a></li>
+                        <li class="item-sub"><a href="">Tin tức tổng hợp</a></li>
+                    </ul>
+                </li>
+                <li class="item-menu"><a href="">Đối tác</a></li>
+                <li class="item-menu"><a href="">Tuyển dụng</a></li>
+                <li class="item-menu"><a href="">Tham quan Samlife</a></li>
+                <li class="item-menu"><a href="">Liên hệ</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="overlay d-block d-lg-none" id="overlay" onclick="closeMenu()">
+    </div>
+
+    <section class="banner">
+        <div class="box-banner">
+            <div class="item-banner">
+                <img src="assets/images/banner/banner_home_1.png" alt="">
+            </div>
+            <div class="item-banner">
+                <img src="assets/images/banner/banner_home_1.1.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="box-about">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="img">
+                            <img src="assets/images/banner/about_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="info">
+                            <div class="title">
+                                <h3 class="name">Về chúng tôi</h3>
+                                <p class="des">Benefit at Life, Benefit to Health, Benefit for Eternity</p>
+                            </div>
+                            <div class="description">
+                                Công ty TNHH đại lý Bảo hiểm Sâm (Sam Life) là đơn vị hoạt động chuyên nghiệp, am hiểu
+                                sâu sắc về lĩnh vực đại lý tổ chức bảo hiểm tại Việt Nam. Chúng tôi nâng cao giá trị,
+                                thay đổi cách mà khách hàng được trải nghiệm dịch vụ bảo hiểm nhân thọ thông qua dịch vụ
+                                của một đại lý tổ chức. Sam Life là đối tác tin cậy của các Công ty bảo hiểm nhân thọ và
+                                cam kết hỗ trợ, đồng hành cùng cộng đồng khách hàng tham gia bảo hiểm nhân thọ tại Việt
+                                Nam có cuộc sống khỏe mạnh, an lành và hạnh phúc.
+                            </div>
+                            <div class="button-group">
+                                <a href="" style="pointer-events: none;">Profile Samlife <i
+                                        class="fa-solid fa-download"></i></a>
+                                <a href="">Tìm hiểu thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="vision">
+        <div class="box-vision">
+            <div class="container-lg">
+                <div class="title">
+                    Tầm nhìn - Sứ mệnh - Cốt lõi
+                </div>
+                <div class="list-vision">
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/icon/vector_1.png" alt="">
+                        </div>
+                        <div class="name">
+                            Tầm nhìn
+                        </div>
+                        <div class="info">
+                            Chúng tôi cung cấp dịch vụ bảo hiểm ưu việt phù hợp với từng đối tượng khách hàng dựa trên
+                            sự
+                            thấu hiểu từng nhu cầu và thị hiếu của khách hàng.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/icon/vector_2.png" alt="">
+                        </div>
+                        <div class="name">
+                            Sứ mệnh
+                        </div>
+                        <div class="info">
+                            Đồng hành cùng khách hàng trên hành trình bảo vệ sức khỏe, nâng cao chất lượng cuộc sống,
+                            góp phần xây dựng an sinh xã hội bền vững.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img src="assets/images/icon/vector_3.png" alt="">
+                        </div>
+                        <div class="name">
+                            Giá trị cốt lõi
+                        </div>
+                        <div class="info">
+                            Luôn tận tâm phục vụ, là người bạn đồng hành tin cậy, sát cánh và nỗ lực bảo vệ sức khỏe của
+                            mọi khách hàng.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project">
+        <div class="box-project">
+            <div class="container-lg">
+                <div class="title">
+                    Dự án tiêu biểu
+                </div>
+                <div class="list-project">
+                    <div class="item">
+                        <div class="img">
+                            <a href="">
+                                <img src="assets/images/banner/typical_project_1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="name">
+                                <a href="">
+                                    Dự án "Quà tặng 4 mùa" dành cho trẻ em
+                                </a>
+                            </div>
+                            <div class="des">
+                                Để không ngừng nâng cao sức khỏe của khách hàng chúng tôi đã đưa các sản phẩm chăm sóc
+                                sức khỏe tuyệt vời từ cây sâm Việt Nam đến với Khách hàng trong nhiều năm
+                            </div>
+                            <div class="see">
+                                <a href="">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="">
+                                <img src="assets/images/banner/typical_project_1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="name">
+                                <a href="">
+                                    Dự án "Quà tặng 4 mùa"
+                                </a>
+                            </div>
+                            <div class="des">
+                                Để không ngừng nâng cao sức khỏe của khách hàng chúng tôi đã đưa các sản phẩm chăm sóc
+                                sức khỏe tuyệt vời từ cây sâm Việt Nam đến với Khách hàng trong nhiều năm
+                            </div>
+                            <div class="see">
+                                <a href="">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="">
+                                <img src="assets/images/banner/typical_project_1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="name">
+                                <a href="">
+                                    Dự án "Quà tặng 4 mùa" dành cho trẻ em
+                                </a>
+                            </div>
+                            <div class="des">
+                                Để không ngừng nâng cao sức khỏe của khách hàng chúng tôi đã đưa các sản phẩm chăm sóc
+                                sức khỏe tuyệt vời từ cây sâm Việt Nam đến với Khách hàng trong nhiều năm
+                            </div>
+                            <div class="see">
+                                <a href="">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="">
+                                <img src="assets/images/banner/typical_project_1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="name">
+                                <a href="">
+                                    Dự án "Quà tặng 4 mùa" dành cho trẻ em
+                                </a>
+                            </div>
+                            <div class="des">
+                                Để không ngừng nâng cao sức khỏe của khách hàng chúng tôi đã đưa các sản phẩm chăm sóc
+                                sức khỏe tuyệt vời từ cây sâm Việt Nam đến với Khách hàng trong nhiều năm
+                            </div>
+                            <div class="see">
+                                <a href="">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <a href="">
+                                <img src="assets/images/banner/typical_project_1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="name">
+                                <a href="">
+                                    Dự án "Quà tặng 4 mùa" dành cho trẻ em
+                                </a>
+                            </div>
+                            <div class="des">
+                                Để không ngừng nâng cao sức khỏe của khách hàng chúng tôi đã đưa các sản phẩm chăm sóc
+                                sức khỏe tuyệt vời từ cây sâm Việt Nam đến với Khách hàng trong nhiều năm
+                            </div>
+                            <div class="see">
+                                <a href="">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parther">
+        <div class="box-parther">
+            <div class="container-lg">
+                <div class="title">
+                    <p class="name">Đối tác của chúng tôi</p>
+                    <p class="sub-title">
+                        Đồng hành đường dài cùng tất cả các công ty BHNT tại Việt Nam.
+                    </p>
+                    <p class="des">
+                        Công ty TNHH Đại lý bảo hiểm Sâm cam kết sẽ luôn mang đến các sản phẩm bảo hiểm tốt nhất, phù
+                        hợp
+                        nhất đến khách hàng trong tất cả các giai đoạn của cuộc đời.
+                    </p>
+                </div>
+                <div class="list-parther">
+                    <div class="item">
+                        <div class="img">
+                            <img src="assets/images/banner/parther_1.jpg" alt="">
+                        </div>
+                        <div class="title-content">
+                            BIDV - MetLife
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="assets/images/banner/parther_2.jpg" alt="">
+                        </div>
+                        <div class="title-content">
+                            BG - Group
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="assets/images/banner/parther_4.jpg" alt="">
+                        </div>
+                        <div class="title-content">
+                            Hệ Sinh Thái Người Già
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img">
+                            <img src="assets/images/banner/parther_3.jpg" alt="">
+                        </div>
+                        <div class="title-content">
+                            HaNoi Safe Food
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="box-new">
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="box-1">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logosam2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="body">
+                            <div class="title">
+                                CÔNG TY TNHH ĐẠI LÝ BẢO HIỂM SÂM (SAM LIFE)
+                            </div>
+                            <div class="address">
+                                <span>Head Quarter:</span>
+                                Tầng 2, tòa nhà Somerset Hòa Bình, số 106 đường Hoàng Quốc Việt, Nghĩa Đô, Cầu Giấy, Hà
+                                Nội
+                            </div>
+                            <div class="address">
+                                <span>Office:</span>
+                                Lô A1, tầng 1 tháp A Tòa nhà Golden Palace, đường Mễ Trì, phường Mễ Trì, quận Nam Từ
+                                Liêm, Hà Nội
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box-2">
+                        <div class="title">
+                            Kết nối
+                        </div>
+                        <div class="des">
+                            Vui lòng đăng ký để nhận tin mới
+                        </div>
+                        <div class="send-mail">
+                            <form action="">
+                                <input type="text" placeholder="Địa chỉ email của bạn...">
+                                <button type="submit"><i class="fa-solid fa-envelope"
+                                        style="color: #ffffff;"></i></button>
+                            </form>
+                        </div>
+                        <div class="email">
+                            <span>Email:</span>
+                            info@baohiemsam.com
+                        </div>
+                        <div class="hotline">
+                            <span>Hotline:</span>
+                            024.66.875.875
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="box-3">
+                        <div class="title">
+                            Fanpage
+                        </div>
+                        <div class="fanpage">
+                            <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100092367303600%26ref%3Dembed_page&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                                width="340" height="500" style="border:none;overflow:hidden" scrolling="no"
+                                frameborder="0" allowfullscreen="true"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                        </div>
+                        <div class="list-contact">
+                            <ul class="ul-reset">
+                                <li><a href=""><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
